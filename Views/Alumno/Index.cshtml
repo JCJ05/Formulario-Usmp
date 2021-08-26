@@ -1,0 +1,91 @@
+@model Formulario_Usmp.Models.Alumno
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center container mt-5">
+    
+      <form class="row g-2 align-items-center" asp-controller="Alumno" asp-action="Guardar"> 
+
+          <h1 class="text-center">Registro de Alumno</h1>
+
+        <div class="col-6">
+
+          <label asp-for="Nombres" class="form-label">Nombres</label>
+          <input asp-for="Nombres" type="text" class="form-control" placeholder="Nombre">
+
+        </div>
+
+        <div class="col-6">
+
+          <label asp-for="apellidos" class="form-label">Apellidos</label>
+          <input asp-for="apellidos" type="text" class="form-control" placeholder="Apellidos">
+
+        </div>
+
+
+         
+
+        <div class="col-6">
+          
+            <br>
+
+            <div class="form-check">
+                <input asp-for="genero"  class="form-check-input" type="radio" value="M">
+                <label asp-for="genero" class="form-check-label">
+                  Masculino
+                </label>
+              </div>
+              <div class="form-check">
+                <input asp-for="genero" class="form-check-input" type="radio" value="F"  >
+                <label asp-for="genero" class="form-check-label">
+                  Femenino
+                </label>
+              </div>
+
+        </div>
+
+       
+
+        <div class="col-6 ">
+
+            <label asp-for="fecha" class="form-label">Fecha de nacimiento: </label>
+            <input asp-for="fecha" type="date" class="form-control" placeholder="Ingrese su fecha">
+  
+          </div>
+
+          <div class="col-6 mb-3">
+
+            <label asp-for="dni" class="form-label">DNI: </label>
+            <input asp-for="dni" type="text" class="form-control" placeholder="Numero de DNI" maxlength="8">
+  
+          </div>
+
+        <div class="col-6">
+
+            <select asp-for="carrera" class="form-select">
+                <option selected disabled>Carrera...</option>
+                <option value="SISTEMAS">Ingenieria de Sistemas</option>
+                <option value="ARQUI">Arquitectura</option>
+                <option value="CIVIL">Ingenieria Civil</option>
+                <option value="INDUSTRIAL">Ingenieria Industrial</option>
+                <option value="AERONAUTICAS">Ciencias Aeronauticas</option>
+              </select>
+
+        </div>
+
+       
+
+        <div>
+
+          <button class="btn btn-info"> Registrar Alumno </button>
+
+        </div>
+
+
+      </form>
+    
+
+
+</div>
